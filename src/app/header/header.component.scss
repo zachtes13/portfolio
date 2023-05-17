@@ -1,0 +1,26 @@
+.container {
+	padding: 2rem;
+}
+
+.link {
+	color: white;
+	text-decoration: none;
+	font-size: 1rem;
+	transition: all 0.2s ease-in-out;
+}
+
+.link:hover {
+	transform: scale(1.1);
+}
+
+.divider1 {
+	width: 30%;
+	border-top-color: #1f292e;
+	margin-left: 10%;
+}
+
+.divider2 {
+	border-top-color: #3e515b;
+	margin-left: 30%;
+	margin-right: 10%;
+}
