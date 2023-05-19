@@ -13,9 +13,13 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
+import { FooterComponent } from './footer/footer.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
-	declarations: [AppComponent, HeaderComponent, HomeComponent],
+	declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent, ExperienceComponent, ProjectsComponent, ContactComponent],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
