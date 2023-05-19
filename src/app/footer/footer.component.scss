@@ -1,0 +1,15 @@
+.container {
+	padding: 1rem;
+}
+
+.socials-logo {
+	color: white;
+	text-decoration: none;
+	font-size: 1.25rem;
+	transition: all 0.2s ease-in-out;
+	align-self: center;
+}
+
+.socials-logo:hover {
+	transform: scale(1.1);
+}
