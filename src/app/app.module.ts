@@ -17,9 +17,18 @@ import { FooterComponent } from './footer/footer.component';
 import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-	declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent, ExperienceComponent, ProjectsComponent, ContactComponent],
+	declarations: [
+		AppComponent,
+		HeaderComponent,
+		HomeComponent,
+		FooterComponent,
+		ExperienceComponent,
+		ProjectsComponent,
+		ContactComponent,
+	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
@@ -32,6 +41,7 @@ import { ContactComponent } from './contact/contact.component';
 		MatFormFieldModule,
 		MatInputModule,
 		MatDividerModule,
+		FontAwesomeModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],
