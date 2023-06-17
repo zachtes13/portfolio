@@ -1,15 +1,19 @@
 .container {
-	padding-top: 5rem;
-	padding-bottom: 5rem;
+	padding-top: 6rem;
+	padding-bottom: 6rem;
 }
 
 .profile-container {
-	padding-top: 10rem;
+	width: 30%;
+	min-width: 30%;
+	margin-right: 8.5rem;
+	height: 17rem;
 }
 
 .cool-guy {
 	position: absolute;
-	left: 19%;
+	left: 30%;
+	margin-left: -8.5rem;
 	border-radius: 45%;
 	width: 17rem;
 	height: 17rem;
@@ -20,17 +24,21 @@
 	font-size: 2rem;
 }
 
+.bio-container {
+	padding-left: 10rem;
+	padding-right: 10rem;
+	align-self: center;
+}
+
 .bio {
 	color: white;
-	padding-top: 13rem;
-	padding-bottom: 7rem;
-	padding-right: 7rem;
-	padding-left: 2rem;
 	font-size: 2rem;
 }
 
 .name {
 	width: 100%;
+	height: 3.25rem;
+	margin-bottom: 6rem;
 }
 
 .first-name {
