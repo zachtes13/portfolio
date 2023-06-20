@@ -18,6 +18,9 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ContactService } from './services/contact.service';
 
 @NgModule({
 	declarations: [
@@ -42,8 +45,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 		MatInputModule,
 		MatDividerModule,
 		FontAwesomeModule,
+		ReactiveFormsModule,
+		HttpClientModule,
 	],
-	providers: [],
+	providers: [ContactService],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}
