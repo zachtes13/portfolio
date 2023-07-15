@@ -1,0 +1,39 @@
+.timeline-item {
+	position: relative;
+	margin-bottom: 0.5rem;
+}
+
+.circle {
+	height: 0.5rem;
+	width: 0.5rem;
+	background-color: white;
+	border: 2px solid black;
+	border-radius: 50%;
+	position: absolute;
+	left: 30%;
+	top: calc(50% - 10px);
+	margin-left: -0.35rem;
+	vertical-align: middle;
+}
+
+.header-container {
+	color: black;
+	width: 29%;
+	min-width: 29%;
+	padding-left: 1%;
+}
+
+.title {
+	font-size: 1.45rem;
+}
+
+.date {
+	font-size: 0.75rem;
+}
+
+.body-container {
+	color: white;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	align-self: center;
+}
