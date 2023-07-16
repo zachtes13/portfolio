@@ -30,10 +30,12 @@
 
 .location {
 	font-size: 1.25rem;
+	margin-bottom: 0.25rem;
 }
 
 .date {
 	font-size: 0.75rem;
+	margin-top: 0;
 }
 
 .body-container {
@@ -43,9 +45,14 @@
 	align-self: center;
 }
 
-.item-divider {
-	width: 80%;
-	border-top-color: white;
+.item-divider-left {
+	width: 30%;
+	border-top-color: #1f292e;
 	margin-left: 10%;
+}
+
+.item-divider-right {
+	border-top-color: #3e515b;
+	margin-left: 30%;
 	margin-right: 10%;
 }
