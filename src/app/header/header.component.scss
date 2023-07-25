@@ -1,3 +1,6 @@
+@use "@angular/material" as mat;
+@import "../../styles.scss";
+
 .container {
 	padding: 2rem;
 }
@@ -11,14 +14,20 @@
 }
 
 .link:hover {
-	transform: scale(1.1);
+	transform: scale(1.2);
+	color: mat.get-color-from-palette($portfolio-accent, 300);
 }
 
 .logo {
 	color: black;
 	text-decoration: none;
-	font-size: 2rem;
+	font-size: 2.25rem;
 	transition: all 0.2s ease-in-out;
+}
+
+.logo:hover {
+	transform: scale(1.2);
+	color: mat.get-color-from-palette($portfolio-primary, 300);
 }
 
 .top-divider {

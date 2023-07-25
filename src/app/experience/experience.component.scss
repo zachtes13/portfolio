@@ -1,3 +1,6 @@
+@use "@angular/material" as mat;
+@import "../../styles.scss";
+
 .timeline-item {
 	position: relative;
 	padding-top: 1rem;
@@ -26,6 +29,7 @@
 
 .title {
 	font-size: 1.45rem;
+	color: black;
 }
 
 .location {
