@@ -1,25 +1,34 @@
 @use "@angular/material" as mat;
 @import "../../styles.scss";
 
+:host {
+	height: 100%;
+}
+
+.section {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .container {
 	padding-top: 6rem;
 	padding-bottom: 6rem;
-}
-
-.profile-container {
-	width: 30%;
-	min-width: 30%;
-	margin-right: 8.5rem;
-	height: 17rem;
+	margin-left: 5rem;
+	margin-right: 5rem;
+	justify-content: end;
+	display: flex;
+	width: 100%;
 }
 
 .cool-guy {
 	position: absolute;
 	left: 30%;
-	margin-left: -8.5rem;
+	margin-left: -13rem;
 	border-radius: 45%;
-	width: 17rem;
-	height: 17rem;
+	width: 25rem;
+	height: 25rem;
 }
 
 .title {
@@ -28,40 +37,41 @@
 }
 
 .bio-container {
-	padding-left: 10rem;
-	padding-right: 10rem;
 	align-self: center;
 }
 
 .bio {
 	color: white;
-	font-size: 2rem;
+	font-size: 1.25rem;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .name {
 	width: 100%;
-	height: 3.25rem;
-	margin-bottom: 6rem;
+	margin-bottom: 0.25rem;
 }
 
 .first-name {
-	color: black;
-	font-size: 3.25rem;
+	color: mat.get-color-from-palette($portfolio-accent, 300);
+	font-size: 4rem;
 	margin-top: 0;
 	margin-bottom: 0;
 	margin-right: 0.5rem;
-	margin-left: 0;
-	position: absolute;
-	right: 70%;
 }
 
 .last-name {
-	color: white;
-	font-size: 3.25rem;
+	color: mat.get-color-from-palette($portfolio-accent, 300);
+	font-size: 4rem;
 	margin-top: 0;
 	margin-bottom: 0;
-	margin-right: 0;
-	margin-left: 0.5rem;
-	position: absolute;
-	left: 30%;
+}
+
+.tech-stack-chips {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+
+.tech-stack-chip {
+	background-color: #d1d7e0;
 }

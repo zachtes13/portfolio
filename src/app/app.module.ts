@@ -14,13 +14,13 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
 import { FooterComponent } from './footer/footer.component';
-import { ExperienceComponent } from './experience/experience.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './services/contact.service';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
 	declarations: [
@@ -28,7 +28,6 @@ import { ContactService } from './services/contact.service';
 		HeaderComponent,
 		HomeComponent,
 		FooterComponent,
-		ExperienceComponent,
 		ProjectsComponent,
 		ContactComponent,
 	],
@@ -39,6 +38,7 @@ import { ContactService } from './services/contact.service';
 		FlexLayoutModule,
 		MatCardModule,
 		MatIconModule,
+		MatChipsModule,
 		MatToolbarModule,
 		MatButtonModule,
 		MatFormFieldModule,

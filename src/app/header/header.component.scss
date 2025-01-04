@@ -8,7 +8,7 @@
 .link {
 	color: white;
 	text-decoration: none;
-	font-size: 1rem;
+	font-size: 1.5rem;
 	transition: all 0.2s ease-in-out;
 	align-self: center;
 }
@@ -19,7 +19,7 @@
 }
 
 .logo {
-	color: black;
+	color: white;
 	text-decoration: none;
 	font-size: 2.25rem;
 	transition: all 0.2s ease-in-out;
@@ -27,17 +27,17 @@
 
 .logo:hover {
 	transform: scale(1.2);
-	color: mat.get-color-from-palette($portfolio-primary, 300);
+	color: mat.get-color-from-palette($portfolio-accent, 300);
 }
 
 .top-divider {
 	width: 30%;
-	border-top-color: #1f292e;
+	border-top-color: #2d283e;
 	margin-left: 10%;
 }
 
 .bottom-divider {
-	border-top-color: #3e515b;
+	border-top-color: #564f6f;
 	margin-left: 30%;
 	margin-right: 10%;
 }

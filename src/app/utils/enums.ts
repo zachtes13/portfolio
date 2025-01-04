@@ -1,0 +1,5 @@
+export enum ROUTES {
+	HOME = 'HOME',
+	PROJECTS = 'PROJECTS',
+	CONTACT = 'CONTACT',
+}

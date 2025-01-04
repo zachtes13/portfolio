@@ -1,20 +1,21 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { ROUTES } from '../utils/enums';
 
 @Injectable({
 	providedIn: 'root',
 })
 export class StateStoreService {
-	private readonly _currentRoute = new BehaviorSubject<string>('HOME');
+	private readonly _currentRoute = new BehaviorSubject<ROUTES>(ROUTES.HOME);
 	readonly currentRoute$ = this._currentRoute.asObservable();
 
 	constructor() {}
 
-	getCurrentRoute(): string {
+	getCurrentRoute(): ROUTES {
 		return this._currentRoute.getValue();
 	}
 
-	public setCurrentRoute(newRoute: string): void {
+	public setCurrentRoute(newRoute: ROUTES): void {
 		this._currentRoute.next(newRoute);
 	}
 }

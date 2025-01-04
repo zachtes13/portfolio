@@ -1,0 +1,17 @@
+@use "@angular/material" as mat;
+@import "../../styles.scss";
+
+:host {
+	height: 100%;
+}
+
+.section {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.title {
+	color: mat.get-color-from-palette($portfolio-accent, 300);
+	font-size: 4rem;
+}
