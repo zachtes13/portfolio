@@ -1,0 +1,35 @@
+<article class="project">
+	<div
+		class="{{
+			isContentRightSide
+				? 'project-image-wrapper-content-right'
+				: 'project-image-wrapper-content-left'
+		}}"
+	>
+		<img
+			class="project-image-content"
+			src="{{ imagePath }}"
+			alt="{{ imageAlt }}"
+		/>
+	</div>
+	<div
+		class="{{
+			isContentRightSide
+				? 'project-info-content-right'
+				: 'project-info-content-left'
+		}}"
+	>
+		<h4 class="project-title">{{ title }}</h4>
+		<p>
+			{{ description }}
+		</p>
+		<div class="project-stack-chips">
+			<mat-chip-set>
+				<mat-chip *ngFor="let tech of techStack">{{ tech }}</mat-chip>
+			</mat-chip-set>
+		</div>
+		<a *ngIf="url" class="project-link" href="{{ url }}">
+			<fa-icon [icon]="faArrowUpRightFromSquare" size="lg"></fa-icon>
+		</a>
+	</div>
+</article>

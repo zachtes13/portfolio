@@ -21,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './services/contact.service';
 import { MatChipsModule } from '@angular/material/chips';
+import { ProjectComponent } from './project/project.component';
 
 @NgModule({
 	declarations: [
@@ -30,6 +31,7 @@ import { MatChipsModule } from '@angular/material/chips';
 		FooterComponent,
 		ProjectsComponent,
 		ContactComponent,
+		ProjectComponent,
 	],
 	imports: [
 		BrowserModule,

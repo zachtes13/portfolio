@@ -1,3 +1,39 @@
 <section class="section">
-	<h3 class="title">Projects</h3>
+	<div>
+		<h3 class="title">Projects</h3>
+		<div class="projects-container">
+			<app-project
+				[title]="'AED Simulator'"
+				[description]="
+					'Group project implementing an interactive simulator of an automated external defibrillator (AED), allowing a user to walk through the steps of treating a patient.'
+				"
+				[imagePath]="'../../assets/aed-sim.jpg'"
+				[imageAlt]="'aed-simulator'"
+				[techStack]="['C++', 'UX/UI', 'Qt Framework', 'Agile', 'Full-stack']"
+				[url]="'https://github.com/zachtes13/comp3004_aed-sim'"
+				[isContentRightSide]="true"
+			></app-project>
+			<app-project
+				[title]="'Portfolio Website'"
+				[description]="
+					'You\'re looking at it! Jokes aside, this is a website to showcase myself and allow you to reach me using a form hooked up to an email service.'
+				"
+				[imagePath]="'../../assets/portfolio.jpg'"
+				[imageAlt]="'portolio-website-homepage'"
+				[techStack]="['Angular', 'Typescript', 'Sass', 'UX/UI', 'Front-end']"
+				[url]="'https://github.com/zachtes13/me'"
+				[isContentRightSide]="false"
+			></app-project>
+			<app-project
+				[title]="'Gym Progress Tracking App'"
+				[description]="
+					'Mobile application (iOS / Android) used to construct and track a weekly exercise plan. Back-end services and SQL database deployed in the cloud.'
+				"
+				[imagePath]="'../../assets/under-construction.png'"
+				[imageAlt]="'under-construction'"
+				[techStack]="['AWS', 'SQL', '.NET', 'Flutter', 'Full-stack']"
+				[isContentRightSide]="true"
+			></app-project>
+		</div>
+	</div>
 </section>
