@@ -15,7 +15,7 @@
 
 .link:hover {
 	transform: scale(1.2);
-	color: mat.get-color-from-palette($portfolio-accent, 300);
+	color: mat.get-color-from-palette($portfolio-primary, 300);
 }
 
 .logo {
@@ -27,7 +27,7 @@
 
 .logo:hover {
 	transform: scale(1.2);
-	color: mat.get-color-from-palette($portfolio-accent, 300);
+	color: mat.get-color-from-palette($portfolio-primary, 300);
 }
 
 .top-divider {

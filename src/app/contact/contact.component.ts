@@ -6,6 +6,7 @@ import {
 	FormGroup,
 	Validators,
 } from '@angular/forms';
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
 	selector: 'app-contact',
@@ -13,6 +14,7 @@ import {
 	styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
+	faPaperPlane = faPaperPlane;
 	userContactFormGroup: FormGroup = new FormGroup({
 		name: new FormControl('', [Validators.required]),
 		email: new FormControl('', [Validators.required, Validators.email]),

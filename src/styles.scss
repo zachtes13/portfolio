@@ -23,9 +23,9 @@
 	src: url("assets/Comfortaa-Bold.ttf");
 }
 
-$portfolio-primary: mat.define-palette(mat.$cyan-palette);
+$portfolio-primary: mat.define-palette(mat.$purple-palette);
 $portfolio-accent: mat.define-palette(mat.$purple-palette);
-$portfolio-warn: mat.define-palette(mat.$orange-palette);
+$portfolio-warn: mat.define-palette(mat.$red-palette);
 
 $portfolio-theme: mat.define-light-theme(
 	(
