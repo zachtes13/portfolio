@@ -19,7 +19,7 @@
 				: 'project-info-content-left'
 		}}"
 	>
-		<h4 class="project-title">{{ title }}</h4>
+		<h2 class="project-title">{{ title }}</h2>
 		<p>
 			{{ description }}
 		</p>
@@ -28,7 +28,12 @@
 				<mat-chip *ngFor="let tech of techStack">{{ tech }}</mat-chip>
 			</mat-chip-set>
 		</div>
-		<a *ngIf="url" class="project-link" href="{{ url }}">
+		<a
+			*ngIf="url"
+			class="project-link"
+			href="{{ url }}"
+			title="navigate to {{ url }}"
+		>
 			<fa-icon [icon]="faArrowUpRightFromSquare" size="lg"></fa-icon>
 		</a>
 	</div>
