@@ -1,9 +1,15 @@
 @use "@angular/material" as mat;
 @import "../../styles.scss";
 
-.project {
+.project-grid {
 	grid-template-columns: repeat(12, 1fr);
 	display: grid;
+	align-items: center;
+}
+
+.project-flex {
+	grid-template-columns: repeat(12, 1fr);
+	display: flex;
 	align-items: center;
 }
 
@@ -52,6 +58,19 @@
 	grid-row: 1/1;
 	grid-column: 2/12;
 	border-radius: 5px;
+}
+
+.project-info-content {
+	margin-left: 3rem;
+	margin-right: 3rem;
+	max-width: 40rem;
+	background-color: white;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.8) 0 0 5px;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .project-info-content-right {

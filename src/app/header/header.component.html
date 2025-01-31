@@ -5,15 +5,51 @@
 				<fa-icon [icon]="faZ"></fa-icon>
 			</a>
 		</div>
-		<div fxLayoutAlign="end" fxLayoutGap="4rem">
-			<a class="link" href="projects" onclick="onSelectRoute(ROUTES.PROJECTS)"
+		<div *ngIf="isWeb()" fxLayoutAlign="end" fxLayoutGap="4rem">
+			<a
+				class="link"
+				href="projects"
+				onclick="() => onSelectRoute(ROUTES.PROJECTS)"
 				>Projects</a
 			>
-			<a class="link" href="contact" onclick="onSelectRoute(ROUTES.CONTACT)"
+			<a
+				class="link"
+				href="contact"
+				onclick="() =>onSelectRoute(ROUTES.CONTACT)"
 				>Contact</a
 			>
 		</div>
+		<div class="nav-menu-container" *ngIf="!isWeb()" fxLayoutAlign="end">
+			<button
+				class="nav-menu"
+				mat-icon-button
+				[matMenuTriggerFor]="menu"
+				aria-label="navigation menu"
+			>
+				<mat-icon class="nav-menu-icon">menu</mat-icon>
+			</button>
+			<mat-menu #menu="matMenu" xPosition="before" yPosition="below">
+				<button mat-menu-item>
+					<a
+						class="nav-menu-item"
+						href="projects"
+						onclick="() => onSelectRoute(ROUTES.PROJECTS)"
+						>Projects</a
+					>
+				</button>
+				<button mat-menu-item>
+					<a
+						class="nav-menu-item"
+						href="contact"
+						onclick="() => onSelectRoute(ROUTES.CONTACT)"
+						>Contact</a
+					>
+				</button>
+			</mat-menu>
+		</div>
 	</div>
-	<mat-divider class="top-divider"></mat-divider>
-	<mat-divider class="bottom-divider"></mat-divider>
+	<mat-divider *ngIf="isWeb()" class="left-divider"></mat-divider>
+	<mat-divider
+		class="{{ isWeb() ? 'right-divider-web' : 'right-divider-mobile' }}"
+	></mat-divider>
 </header>

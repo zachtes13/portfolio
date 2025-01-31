@@ -43,6 +43,8 @@ html,
 body {
 	height: 100%;
 }
+
+// web
 body {
 	margin: 0;
 	font-family: Comfortaa-Regular;
@@ -53,4 +55,13 @@ body {
 		#2d283e 30%,
 		#2d283e 100%
 	);
+}
+
+// tablet and handset
+@media (max-width: 1279.98px) {
+	body {
+		margin: 0;
+		font-family: Comfortaa-Regular;
+		background: #2d283e;
+	}
 }

@@ -3,3 +3,9 @@ export enum ROUTES {
 	PROJECTS = 'PROJECTS',
 	CONTACT = 'CONTACT',
 }
+
+export enum BREAKPOINT {
+	WEB = 'WEB',
+	TABLET = 'TABLET',
+	HANDSET = 'HANDSET',
+}

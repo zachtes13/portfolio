@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatMenuModule } from '@angular/material/menu';
 import { FooterComponent } from './footer/footer.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { ContactComponent } from './contact/contact.component';
@@ -49,6 +50,7 @@ import { ProjectComponent } from './project/project.component';
 		FontAwesomeModule,
 		ReactiveFormsModule,
 		HttpClientModule,
+		MatMenuModule,
 	],
 	providers: [ContactService],
 	bootstrap: [AppComponent],

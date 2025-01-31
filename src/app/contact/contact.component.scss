@@ -14,8 +14,14 @@
 	justify-content: center;
 }
 
-.contact-info-inputs {
+.contact-info-inputs-row {
 	display: flex;
+	gap: 1rem;
+}
+
+.contact-info-inputs-column {
+	display: flex;
+	flex-direction: column;
 	gap: 1rem;
 }
 
@@ -31,15 +37,11 @@
 
 .contact-form {
 	height: fit-content;
-	width: 45rem;
 	background-color: white;
-	grid-column: 6/12;
-	grid-row: 1/1;
-	z-index: 1;
 	border-radius: 5px;
 	box-shadow: rgba(0, 0, 0, 0.8) 0 0 5px;
 	padding: 2rem;
-	align-items: start !important;
+	align-items: center !important;
 	gap: 1rem;
 	align-self: center;
 }
@@ -47,9 +49,10 @@
 .form-title {
 	font-size: 2rem;
 	margin: 1rem;
+	align-self: start;
 }
 
-.contact-form-input {
+.contact-info-input {
 	width: 20rem;
 }
 

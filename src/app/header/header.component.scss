@@ -18,6 +18,38 @@
 	color: mat.get-color-from-palette($portfolio-primary, 300);
 }
 
+.nav-menu-container {
+	display: flex;
+	align-items: center !important;
+}
+
+.nav-menu {
+	color: white;
+	width: 2rem !important;
+	height: 2rem !important;
+	display: flex;
+	align-items: center;
+	padding: 0 !important;
+}
+
+.nav-menu-icon {
+	font-size: 2rem;
+	width: 2rem;
+	height: 2rem;
+}
+
+.nav-menu-item {
+	color: black;
+	text-decoration: none;
+	font-size: 1.5rem;
+	align-self: center;
+}
+
+.mat-menu-panel {
+	opacity: 1 !important;
+	transform: scale(1, 1) !important;
+}
+
 .logo {
 	color: white;
 	text-decoration: none;
@@ -30,14 +62,20 @@
 	color: mat.get-color-from-palette($portfolio-primary, 300);
 }
 
-.top-divider {
+.left-divider {
 	width: 30%;
 	border-top-color: #2d283e;
 	margin-left: 10%;
 }
 
-.bottom-divider {
+.right-divider-web {
 	border-top-color: #564f6f;
 	margin-left: 30%;
 	margin-right: 10%;
+}
+
+.right-divider-mobile {
+	border-top-color: #564f6f;
+	margin-right: 10%;
+	margin-left: 10%;
 }

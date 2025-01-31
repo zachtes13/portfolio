@@ -8,8 +8,12 @@
 			(ngSubmit)="onSubmit()"
 		>
 			<h1 class="form-title">Want to talk?</h1>
-			<div class="contact-info-inputs">
-				<mat-form-field class="contact-form-input">
+			<div
+				class="{{
+					isHandset() ? 'contact-info-inputs-column' : 'contact-info-inputs-row'
+				}}"
+			>
+				<mat-form-field class="{{ isHandset() ? '' : 'contact-info-input' }}">
 					<mat-label for="name">Full Name</mat-label>
 					<input id="name" formControlName="name" matInput required />
 					<mat-error
@@ -19,7 +23,7 @@
 						}}</mat-error
 					>
 				</mat-form-field>
-				<mat-form-field class="contact-form-input">
+				<mat-form-field class="{{ isHandset() ? '' : 'contact-info-input' }}">
 					<mat-label for="email">Email</mat-label>
 					<input id="email" formControlName="email" matInput required />
 					<mat-error
@@ -30,7 +34,15 @@
 					>
 				</mat-form-field>
 			</div>
-			<mat-form-field class="contact-form-input full-width-input">
+			<mat-form-field
+				class="{{
+					isWeb() || isTablet()
+						? 'full-width-input'
+						: isHandset()
+						? ''
+						: 'contact-info-input'
+				}}"
+			>
 				<mat-label for="subject">Subject</mat-label>
 				<input id="subject" formControlName="subject" matInput required />
 				<mat-error
@@ -40,7 +52,15 @@
 					}}</mat-error
 				>
 			</mat-form-field>
-			<mat-form-field class="contact-form-input full-width-input">
+			<mat-form-field
+				class="{{
+					isWeb() || isTablet()
+						? 'full-width-input'
+						: isHandset()
+						? ''
+						: 'contact-info-input'
+				}}"
+			>
 				<mat-label for="message">Message</mat-label>
 				<textarea
 					id="message"

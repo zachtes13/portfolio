@@ -1,10 +1,19 @@
 <main class="section">
-	<img class="cool-guy" src="../../assets/gitme.png" alt="photo-of-me" />
+	<img
+		*ngIf="isWeb()"
+		class="cool-guy"
+		src="../../assets/gitme.png"
+		alt="photo-of-me"
+	/>
 	<div class="container">
 		<div fxLayout="column" fxLayoutAlign="space-between">
 			<div fxLayout="row" fxLayoutAlign="space-between">
-				<div class="bio-container" fxLayout="column" fxLayoutAlign="end end">
-					<div class="name" fxLayout="row">
+				<div
+					class="bio-container"
+					fxLayout="column"
+					fxLayoutAlign="{{ isWeb() ? 'end end' : 'start start' }}"
+				>
+					<div class="name" fxLayout="{{ isWeb() ? 'row' : 'column' }}">
 						<h1 class="first-name">Zachary</h1>
 						<h1 class="last-name">Tesolin</h1>
 					</div>

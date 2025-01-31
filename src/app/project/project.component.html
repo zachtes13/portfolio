@@ -1,5 +1,6 @@
-<article class="project">
+<article class="{{ isWeb() ? 'project-grid' : 'project-flex' }}">
 	<div
+		*ngIf="isWeb()"
 		class="{{
 			isContentRightSide
 				? 'project-image-wrapper-content-right'
@@ -14,9 +15,11 @@
 	</div>
 	<div
 		class="{{
-			isContentRightSide
+			isContentRightSide && isWeb()
 				? 'project-info-content-right'
-				: 'project-info-content-left'
+				: !isContentRightSide && isWeb()
+				? 'project-info-content-left'
+				: 'project-info-content'
 		}}"
 	>
 		<h2 class="project-title">{{ title }}</h2>
