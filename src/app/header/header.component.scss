@@ -13,6 +13,11 @@
 	align-self: center;
 }
 
+.active {
+	color: mat.get-color-from-palette($portfolio-primary, 300) !important;
+	transform: scale(1.2) !important;
+}
+
 .link:hover {
 	transform: scale(1.2);
 	color: mat.get-color-from-palette($portfolio-primary, 300);

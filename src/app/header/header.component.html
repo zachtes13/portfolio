@@ -1,7 +1,7 @@
 <header>
 	<div class="container" fxLayout="row" fxLayoutAlign="space-between">
 		<div>
-			<a class="logo" href="#" title="navigate to home page">
+			<a class="logo" [routerLink]="['/']" title="navigate to home page">
 				<fa-icon [icon]="faZ"></fa-icon>
 			</a>
 		</div>
@@ -9,13 +9,15 @@
 			<a
 				class="link"
 				href="projects"
-				onclick="() => onSelectRoute(ROUTES.PROJECTS)"
+				[routerLink]="['/projects']"
+				[routerLinkActive]="['active']"
 				>Projects</a
 			>
 			<a
 				class="link"
 				href="contact"
-				onclick="() =>onSelectRoute(ROUTES.CONTACT)"
+				[routerLink]="['/contact']"
+				[routerLinkActive]="['active']"
 				>Contact</a
 			>
 		</div>
@@ -32,7 +34,8 @@
 				<button mat-menu-item>
 					<a
 						class="nav-menu-item"
-						href="projects"
+						[routerLink]="['/projects']"
+						[routerLinkActive]="['active']"
 						onclick="() => onSelectRoute(ROUTES.PROJECTS)"
 						>Projects</a
 					>
@@ -40,7 +43,8 @@
 				<button mat-menu-item>
 					<a
 						class="nav-menu-item"
-						href="contact"
+						[routerLink]="['/contact']"
+						[routerLinkActive]="['active']"
 						onclick="() => onSelectRoute(ROUTES.CONTACT)"
 						>Contact</a
 					>

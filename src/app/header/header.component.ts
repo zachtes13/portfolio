@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faZ } from '@fortawesome/free-solid-svg-icons';
 import { BREAKPOINT, ROUTES } from '../utils/enums';
-import { StateStoreService } from '../services/state-store.service';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Subject, takeUntil } from 'rxjs';
 import { isWeb } from '../utils/utils';
@@ -17,10 +16,7 @@ export class HeaderComponent implements OnInit {
 	componentDestroyed$: Subject<boolean> = new Subject();
 	breakpoint = BREAKPOINT.WEB;
 
-	constructor(
-		private stateStoreService: StateStoreService,
-		private breakpointObserver: BreakpointObserver
-	) {}
+	constructor(private breakpointObserver: BreakpointObserver) {}
 
 	ngOnInit() {
 		this.breakpoint = this.breakpointObserver.isMatched(BREAKPOINT.WEB)
@@ -52,10 +48,6 @@ export class HeaderComponent implements OnInit {
 					this.breakpoint = BREAKPOINT.HANDSET;
 				}
 			});
-	}
-
-	onSelectRoute(selectedRoute: ROUTES) {
-		this.stateStoreService.setCurrentRoute(selectedRoute);
 	}
 
 	isWeb() {
