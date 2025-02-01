@@ -1,0 +1,59 @@
+<header>
+	<div class="container" fxLayout="row" fxLayoutAlign="space-between">
+		<div>
+			<a class="logo" [routerLink]="['/']" title="navigate to home page">
+				<fa-icon [icon]="faZ"></fa-icon>
+			</a>
+		</div>
+		<div *ngIf="isWeb()" fxLayoutAlign="end" fxLayoutGap="4rem">
+			<a
+				class="link"
+				href="projects"
+				[routerLink]="['/projects']"
+				[routerLinkActive]="['active']"
+				>Projects</a
+			>
+			<a
+				class="link"
+				href="contact"
+				[routerLink]="['/contact']"
+				[routerLinkActive]="['active']"
+				>Contact</a
+			>
+		</div>
+		<div class="nav-menu-container" *ngIf="!isWeb()" fxLayoutAlign="end">
+			<button
+				class="nav-menu"
+				mat-icon-button
+				[matMenuTriggerFor]="menu"
+				aria-label="navigation menu"
+			>
+				<mat-icon class="nav-menu-icon">menu</mat-icon>
+			</button>
+			<mat-menu #menu="matMenu" xPosition="before" yPosition="below">
+				<button mat-menu-item>
+					<a
+						class="nav-menu-item"
+						[routerLink]="['/projects']"
+						[routerLinkActive]="['active']"
+						onclick="() => onSelectRoute(ROUTES.PROJECTS)"
+						>Projects</a
+					>
+				</button>
+				<button mat-menu-item>
+					<a
+						class="nav-menu-item"
+						[routerLink]="['/contact']"
+						[routerLinkActive]="['active']"
+						onclick="() => onSelectRoute(ROUTES.CONTACT)"
+						>Contact</a
+					>
+				</button>
+			</mat-menu>
+		</div>
+	</div>
+	<mat-divider *ngIf="isWeb()" class="left-divider"></mat-divider>
+	<mat-divider
+		class="{{ isWeb() ? 'right-divider-web' : 'right-divider-mobile' }}"
+	></mat-divider>
+</header>

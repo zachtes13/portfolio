@@ -1,0 +1,43 @@
+<article class="{{ isWeb() ? 'project-grid' : 'project-flex' }}">
+	<div
+		*ngIf="isWeb()"
+		class="{{
+			isContentRightSide
+				? 'project-image-wrapper-content-right'
+				: 'project-image-wrapper-content-left'
+		}}"
+	>
+		<img
+			class="project-image-content"
+			src="{{ imagePath }}"
+			alt="{{ imageAlt }}"
+		/>
+	</div>
+	<div
+		class="{{
+			isContentRightSide && isWeb()
+				? 'project-info-content-right'
+				: !isContentRightSide && isWeb()
+				? 'project-info-content-left'
+				: 'project-info-content'
+		}}"
+	>
+		<h2 class="project-title">{{ title }}</h2>
+		<p>
+			{{ description }}
+		</p>
+		<div class="project-stack-chips">
+			<mat-chip-set>
+				<mat-chip *ngFor="let tech of techStack">{{ tech }}</mat-chip>
+			</mat-chip-set>
+		</div>
+		<a
+			*ngIf="url"
+			class="project-link"
+			href="{{ url }}"
+			title="navigate to {{ url }}"
+		>
+			<fa-icon [icon]="faArrowUpRightFromSquare" size="lg"></fa-icon>
+		</a>
+	</div>
+</article>

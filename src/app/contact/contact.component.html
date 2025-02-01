@@ -1,0 +1,91 @@
+<main class="section">
+	<div class="contact-container">
+		<form
+			[formGroup]="userContactFormGroup"
+			class="contact-form"
+			fxLayout="column"
+			fxLayoutAlign="space-around center"
+			(ngSubmit)="onSubmit()"
+		>
+			<h1 class="form-title">Want to talk?</h1>
+			<div
+				class="{{
+					isHandset() ? 'contact-info-inputs-column' : 'contact-info-inputs-row'
+				}}"
+			>
+				<mat-form-field class="{{ isHandset() ? '' : 'contact-info-input' }}">
+					<mat-label for="name">Full Name</mat-label>
+					<input id="name" formControlName="name" matInput required />
+					<mat-error
+						*ngIf="userContactFormGroup.get('name')?.status === 'INVALID'"
+						>{{
+							getErrorMessage(userContactFormGroup.get("name"), "Name")
+						}}</mat-error
+					>
+				</mat-form-field>
+				<mat-form-field class="{{ isHandset() ? '' : 'contact-info-input' }}">
+					<mat-label for="email">Email</mat-label>
+					<input id="email" formControlName="email" matInput required />
+					<mat-error
+						*ngIf="userContactFormGroup.get('email')?.status === 'INVALID'"
+						>{{
+							getErrorMessage(userContactFormGroup.get("email"), "Email")
+						}}</mat-error
+					>
+				</mat-form-field>
+			</div>
+			<mat-form-field
+				class="{{
+					isWeb() || isTablet()
+						? 'full-width-input'
+						: isHandset()
+						? ''
+						: 'contact-info-input'
+				}}"
+			>
+				<mat-label for="subject">Subject</mat-label>
+				<input id="subject" formControlName="subject" matInput required />
+				<mat-error
+					*ngIf="userContactFormGroup.get('subject')?.status === 'INVALID'"
+					>{{
+						getErrorMessage(userContactFormGroup.get("subject"), "Subject")
+					}}</mat-error
+				>
+			</mat-form-field>
+			<mat-form-field
+				class="{{
+					isWeb() || isTablet()
+						? 'full-width-input'
+						: isHandset()
+						? ''
+						: 'contact-info-input'
+				}}"
+			>
+				<mat-label for="message">Message</mat-label>
+				<textarea
+					id="message"
+					formControlName="message"
+					matInput
+					required
+				></textarea>
+				<mat-error
+					*ngIf="userContactFormGroup.get('message')?.status === 'INVALID'"
+					>{{
+						getErrorMessage(userContactFormGroup.get("message"), "Message")
+					}}</mat-error
+				>
+			</mat-form-field>
+			<button
+				class="submit-button"
+				type="submit"
+				mat-fab
+				color="primary"
+				[disabled]="userContactFormGroup.invalid"
+				extended
+			>
+				Send
+				<fa-icon [icon]="faPaperPlane"></fa-icon>
+			</button>
+		</form>
+	</div>
+</main>

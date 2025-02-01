@@ -1,0 +1,11 @@
+export enum ROUTES {
+	HOME = 'HOME',
+	PROJECTS = 'PROJECTS',
+	CONTACT = 'CONTACT',
+}
+
+export enum BREAKPOINT {
+	WEB = 'WEB',
+	TABLET = 'TABLET',
+	HANDSET = 'HANDSET',
+}

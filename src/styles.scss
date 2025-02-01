@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+@import "@angular/material/theming";
+@include mat.core();
+
+@font-face {
+	font-family: "Comfortaa-Light";
+	src: url("assets/Comfortaa-Light.ttf");
+}
+@font-face {
+	font-family: "Comfortaa-Medium";
+	src: url("assets/Comfortaa-Medium.ttf");
+}
+@font-face {
+	font-family: "Comfortaa-Regular";
+	src: url("assets/Comfortaa-Regular.ttf");
+}
+@font-face {
+	font-family: "Comfortaa-SemiBold";
+	src: url("assets/Comfortaa-SemiBold.ttf");
+}
+@font-face {
+	font-family: "Comfortaa-Bold";
+	src: url("assets/Comfortaa-Bold.ttf");
+}
+
+$portfolio-primary: mat.define-palette(mat.$purple-palette);
+$portfolio-accent: mat.define-palette(mat.$purple-palette);
+$portfolio-warn: mat.define-palette(mat.$red-palette);
+
+$portfolio-theme: mat.define-light-theme(
+	(
+		color: (
+			primary: $portfolio-primary,
+			accent: $portfolio-accent,
+			warn: $portfolio-warn,
+		),
+	)
+);
+
+@include mat.all-component-themes($portfolio-theme);
+
+html,
+body {
+	height: 100%;
+}
+
+// web
+body {
+	margin: 0;
+	font-family: Comfortaa-Regular;
+	background: linear-gradient(
+		to right,
+		#564f6f 0%,
+		#564f6f 30%,
+		#2d283e 30%,
+		#2d283e 100%
+	);
+}
+
+// tablet and handset
+@media (max-width: 1279.98px) {
+	body {
+		margin: 0;
+		font-family: Comfortaa-Regular;
+		background: #2d283e;
+	}
+}
