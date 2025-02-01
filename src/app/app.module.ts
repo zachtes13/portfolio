@@ -23,6 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './services/contact.service';
 import { MatChipsModule } from '@angular/material/chips';
 import { ProjectComponent } from './project/project.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
 	declarations: [
@@ -33,6 +34,7 @@ import { ProjectComponent } from './project/project.component';
 		ProjectsComponent,
 		ContactComponent,
 		ProjectComponent,
+  NotFoundComponent,
 	],
 	imports: [
 		BrowserModule,
